@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header class="h-[80px] bg-[#f5f5f5] shadow-md">
+      <div class="mx-auto">
+        <div class="container mx-auto">
+          <div class="flex justify-between p-[20px]">
+            <div>
+              <div>
+                <a href="./index.html">
+                  <h1 class="text-xl">Logo</h1>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h1 class="text-xl">Turg'unov Kamoliddin</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="flex">
+      <menu class="w-[137px] bg-[#f5f5f5] text-center py-10 shadow">
+        <div class="mb-8">
+          <a href="./index.html">
+            <img class="mx-auto" src="./image/groups.png" alt="" />
+            <h2>Dashboard</h2>
+          </a>
+        </div>
+        <div class="mb-8">
+          <a href="./Rooms.html">
+            <img class="mx-auto" src="./image/Dashboard.png" alt="" />
+            <h2>Rooms</h2>
+          </a>
+        </div>
+        <div class="mb-8">
+          <a href="./Groups.html">
+            <img class="mx-auto" src="./image/groups.png" alt="" />
+            <h2>Groups</h2>
+          </a>
+        </div>
+        <div class="mb-8">
+          <a href="./Teachers.html">
+            <img class="mx-auto" src="./image/groups.png" alt="" />
+            <h2>Teachers</h2>
+          </a>
+        </div>
+        <div class="mb-8">
+          <a href="./Students.html">
+            <img class="mx-auto" src="./image/groups.png" alt="" />
+            <h2>Students</h2>
+          </a>
+        </div>
+      </menu>
+      <div class="content">
+        <div class="flex gap-5">
+          <div class="flex-1">
+            <h1>Xonalar royhati</h1>
+            <input
+              oninput="searchRoom()"
+              type="search"
+              id="roomSearch"
+              class="p-2 bg-[#f5f5f5]"
+            />
+            <div
+              id="roombox"
+              class="grid grid-cols-3 mt-5 gap-5 font-mono"
+            ></div>
+          </div>
+          <div class="w-[300px]">
+            <h1 class="text-[#999999] text-[40px] font-bold">New Room</h1>
+            <input
+              id="roomname"
+              type="text"
+              placeholder="room name"
+              class="mb-4 border-gray-800 border rounded-md bg-[#f5f5f5] w-[289px] h-[43px]"
+            />
+            <input
+              id="stdNum"
+              type="number"
+              placeholder="Student numbers"
+              class="mb-5 border-gray-800 border rounded-md bg-[#f5f5f5] w-[289px] h-[43px]"
+            />
+            <div class="text-right">
+              <button
+                onclick="addRoom()"
+                id="Addbtn"
+                class="border border-black rounded-lg h-[35px] bg-[#E8AD77]"
+              >
+                Xona qo'shish
+              </button>
+            </div>
+            <h1 class="text-[#999999] text-[40px] font-bold">Edit Room</h1>
+            <input
+              id="editRoomInp1"
+              type="text"
+              placeholder="room1"
+              class="mb-4 border-gray-800 border rounded-md bg-[#f5f5f5] w-[289px] h-[43px]"
+            />
+            <input
+              id="editRoomInp2"
+              type="number"
+              placeholder="12"
+              class="mb-4 border-gray-800 border rounded-md bg-[#f5f5f5] w-[289px] h-[43px]"
+            />
+            <div class="text-right">
+              <button
+                onclick="deleteRoom()"
+                id="deleteBtn"
+                class="bg-[#E57272] border border-black rounded-lg w-[70px] h-[35px]"
+              >
+                Delete
+              </button>
+              <button
+                onclick="editRoomFunc()"
+                id="Addbtn"
+                class="border border-black rounded-lg w-[70px] h-[35px] bg-[#E8AD77]"
+              >
+                Edit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

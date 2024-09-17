@@ -1,0 +1,18 @@
+menu {
+  height: calc(100vh - 80px);
+  position: fixed;
+  top: 80px;
+  left: 0;
+}
+.content {
+  flex: 1;
+  padding-top: 100px;
+  padding-left: 157px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
